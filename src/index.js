@@ -23,7 +23,7 @@ function Navbar() {
 
 function NavLink({ href, children }) {
   const location = useLocation(); // Hook to get current URL
-  const isActive = location.pathname === href; // Check if the current path matches
+  const isActive = location.asPath === href; // Check if the current path matches
 
   return (
     <Link to={href} className="relative block group">
